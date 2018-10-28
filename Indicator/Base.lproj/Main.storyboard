@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uxy-vP-DRg">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Indicator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKt-wQ-c5T">
+                                <rect key="frame" x="0.0" y="88" width="375" height="345"/>
+                                <state key="normal" title="Push">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6cC-IW-S3e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZz-gI-11C">
+                                <rect key="frame" x="0.0" y="433" width="375" height="345"/>
+                                <state key="normal" title="Modal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="modal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DEk-rj-Nzf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fKt-wQ-c5T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8it-9a-6ge"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pZz-gI-11C" secondAttribute="bottom" id="A3P-Q4-jBL"/>
+                            <constraint firstItem="pZz-gI-11C" firstAttribute="top" secondItem="fKt-wQ-c5T" secondAttribute="bottom" id="CcL-9o-ttD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pZz-gI-11C" secondAttribute="trailing" id="I9f-Ip-Bln"/>
+                            <constraint firstItem="pZz-gI-11C" firstAttribute="height" secondItem="fKt-wQ-c5T" secondAttribute="height" id="UcA-1F-rsr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fKt-wQ-c5T" secondAttribute="trailing" id="hdG-yK-7Ob"/>
+                            <constraint firstItem="pZz-gI-11C" firstAttribute="width" secondItem="fKt-wQ-c5T" secondAttribute="width" id="npQ-PZ-Q2c"/>
+                            <constraint firstItem="pZz-gI-11C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oWt-jq-KMi"/>
+                            <constraint firstItem="fKt-wQ-c5T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w33-yc-meU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rz7-sk-JYK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="-50"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BkL-rr-JQ8">
+            <objects>
+                <navigationController id="Uxy-vP-DRg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KUM-yP-XNA">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tgH-u7-44Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7IO-fY-zjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-270" y="-50"/>
+        </scene>
+    </scenes>
+</document>
